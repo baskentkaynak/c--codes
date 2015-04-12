@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Admin_Default" ValidateRequest="false" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GeneratePassword.aspx.cs" Inherits="Admin_GeneratePassword" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -33,36 +33,34 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        
-        <nav class="navbar navbar-default"role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Başkent Kaynak</a>
-    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="login-panel panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Please Enter Your Password</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" placeholder="Password"></asp:TextBox>
+                                    </div>
+                                    <!-- Change this to a button or input when using this as a form -->
+                                    <asp:Button ID="btnSubmit" runat="server" Text="Generate Hashed" 
+                                        CssClass="btn btn-lg btn-success btn-block" onclick="btnSubmit_Click"/>
+                                        
+                                    <div class="form-group">
+                                        <asp:Label ID="lblResult" runat="server" CssClass="form-control"></asp:Label>
+                                    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="Customer.aspx">Müşteri <span class="sr-only">(current)</span></a></li>
-        <li><a href="Product.aspx">Ürün</a></li>
-          <li><a href="User.aspx">Kullanıcı</a></li>
-          <li><a href="#">Link</a></li>
-        
-      </ul>
-   
-   
-      
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- jQuery Version 1.11.0 -->
         <script src="js/jquery-1.11.0.js"></script>

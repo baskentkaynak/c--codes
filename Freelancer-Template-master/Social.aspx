@@ -1,9 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="Admin_Default" ValidateRequest="false" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Social.aspx.cs" Inherits="Admin_Social" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head id="Head1" runat="server">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,35 +32,30 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        
-        <nav class="navbar navbar-default"role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Başkent Kaynak</a>
-    </div>
+        <div id="wrapper">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="Customer.aspx">Müşteri <span class="sr-only">(current)</span></a></li>
-        <li><a href="Product.aspx">Ürün</a></li>
-          <li><a href="User.aspx">Kullanıcı</a></li>
-          <li><a href="#">Link</a></li>
-        
-      </ul>
-   
-   
-      
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+            <%= PageHeader %>
+
+            <!-- Page Content -->
+            <div id="page-wrapper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Social</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div id="fields" runat="server"></div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <asp:Button ID="btnSave" runat="server" Text="Save Changes" 
+                            CssClass="btn btn-lg btn-success btn-block" onclick="btnSave_Click" />
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-wrapper -->
+
+        </div>
 
 
         <!-- jQuery Version 1.11.0 -->
